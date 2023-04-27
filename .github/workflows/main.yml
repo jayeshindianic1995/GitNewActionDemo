@@ -19,7 +19,7 @@ jobs:
   #this workflow contains single job called "build"
   build:
     # type of runner that job will run on
-    runs-on: ubantu-latest
+    runs-on: ubuntu-latest
 
     #Steps represent sequence of tasks that will be executed as part of job
     steps:
