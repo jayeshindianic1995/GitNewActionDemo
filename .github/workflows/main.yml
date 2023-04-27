@@ -24,8 +24,8 @@ jobs:
     #Steps represent sequence of tasks that will be executed as part of job
     steps:
       #Checkout your repository under
-        name: Checkout branch
-      - uses: actions/checkout@v2
+      - name: Checkout branch
+        uses: actions/checkout@v2
 
       #Runs a single command by single shell
       - name: Run Lint
