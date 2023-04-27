@@ -7,9 +7,9 @@ name: CI
 on:
   #Trigger workflow on push or pull request event but only for master branch
   push:
-    branches:[master]
+    branches: [master]
   pull_request:
-    branches:[master]
+    branches: [master]
 
   #Allow to run this workflow manually from actions tab
   workflow_dispatch:
