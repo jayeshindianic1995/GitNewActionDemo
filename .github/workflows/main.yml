@@ -1,1 +1,40 @@
+#basic workflow
+
+name: CI
+
+# mention events when action will run
+
+on:
+  #Trigger workflow on push or pull request event but only for master branch
+  push:
+    branches:[master]
+  pull_request:
+    branches:[master]
+
+  #Allow to run this workflow manually from actions tab
+  workflow_dispatch:
+
+#A workflow run made of one or more jobs that can be run sequiential or parralel manner
+jobs:
+  #this workflow contains single job called "build"
+  build:
+    # type of runner that job will run on
+    runs-on: ubantu-latest
+
+    #Steps represent sequence of tasks that will be executed as part of job
+    steps:
+      #Checkout your repository under
+        name: Checkout branch
+      - uses: actions/checkout@v2
+
+      #Runs a single command by single shell
+      - name: Run Lint
+        run: ./gradlew lintDebug
+
+      #Runs a single command by single shell
+      - name: Upload html test report
+        uses: actions/upload-artifact@v2
+        with:
+          name: index.html
+          path: app/build/reports/lint-results.debug.html
 
