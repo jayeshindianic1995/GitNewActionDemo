@@ -9,3 +9,13 @@ plugins {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+sonarqube {
+    properties {
+        property 'sonar.projectName', 'Example of SonarQube Scanner for Gradle Usage'
+        property 'sonar.sources','./src/main'
+        property 'sonar.host.url','https://sonarcloud.io/'
+        property 'sonar.organizaion','jayeshindianic1995'
+        property 'sonar.projectKey','jayeshindianic1995_gitNewActionDemo'
+    }
+}
