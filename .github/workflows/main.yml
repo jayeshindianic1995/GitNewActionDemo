@@ -56,7 +56,7 @@ jobs:
 #          path: app/build/reports/tests/testDebugUnitTest/
 
   static-code-analysis:
-    needs: [test-cases]
+    #needs: [test-cases]
     runs-on: ubuntu-latest
 
     steps:
