@@ -39,6 +39,7 @@ jobs:
           path: app/build/reports/lint-results-debug.html
 
   test-cases:
+    needs: [lint]
     runs-on: ubuntu-latest
 
     steps:
