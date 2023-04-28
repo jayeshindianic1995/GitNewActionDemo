@@ -16,6 +16,6 @@ sonarqube {
         property 'sonar.sources','./src/main'
         property 'sonar.host.url','https://sonarcloud.io/'
         property 'sonar.organization','jayeshindianic1995'
-        property 'sonar.projectKey','jayeshindianic1995_gitNewActionDemo'
+        property 'sonar.projectKey','jayeshindianic1995_GitNewActionDemo'
     }
 }
