@@ -43,6 +43,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name : Checkout branch
+        uses : actions/checkout@v2
+
       - name: Run Unit Test Cases
         run: ./gradlew test
 
